@@ -791,11 +791,11 @@ body.nav-active {
 
 .navbar-link .span {
   transition: var(--transition-1);
-  color: var(--eerie-black-4);
+  color: var(--green-light);
 }
 
 .navbar-link:is(:hover, :focus-visible, .active) .span {
-  color: var(--green-light);
+  color: var(--green-dark);
   transform: translateX(20px);
 }
 
