@@ -152,7 +152,8 @@ a {
 }
 
 img {
-  height: auto;
+  height: 130px;
+  width: 130px;
 }
 
 input,
@@ -753,10 +754,11 @@ body.nav-active {
   color: var(--eerie-black-4);
 }
 
-.navbar .logo {
+.navbar .logo img {
   max-width: max-content;
   margin-inline: auto;
   margin-block-end: 60px;
+  height: 100px;
 }
 
 .navbar-list {
@@ -965,9 +967,108 @@ body.nav-active {
   animation-delay: 2s;
 }
 
+/*=============== PROJECTS ===============*/
+.main {
+  overflow: hidden; /* For animation */
+}
+
+.projects__container {
+  overflow: hidden;
+  max-width: 1200px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.projects__content {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.project-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 4px rgba(175, 175, 175, 0.4);
+}
+@keyframes sclAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.project-img:hover .proj-overlay {
+  top: 0;
+}
+.proj-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(transparent, var(--title-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.4s ease;
+}
+
+.proj-overlay h4 {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+.proj-overlay p {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  width: 90%;
+}
+.action-aria {
+  display: flex;
+  gap: 10px;
+}
+.project-img:hover img {
+  transform: scale(1.1);
+}
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* End Projects Section */
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .project-img {
+    height: max-content;
+  }
+}
 
 /**
  * responsive for larger than 575px screen
@@ -997,6 +1098,12 @@ body.nav-active {
 
   .contact-number {
     --fontSize-body-1: 3rem;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .project-img {
+    height: max-content;
   }
 
   /**
@@ -1147,6 +1254,14 @@ body.nav-active {
   .hero .slider-btn:is(:hover, :focus-visible) {
     background-color: var(--gold-crayola);
     color: var(--black);
+  }
+
+  /**
+   * DOCTORS
+   */
+
+  .projects__container {
+    width: 500px;
   }
 }
 
