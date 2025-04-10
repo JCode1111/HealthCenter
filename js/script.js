@@ -152,3 +152,69 @@ window.addEventListener("mousemove", function (event) {
     parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
   }
 });
+
+const projects = [
+  {
+    img: "images/hero-slider-1.jpg",
+    alt: "Web project 1",
+    dataName: "website",
+    p: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate animi atque rem.",
+    a: "https://example.com/website1",
+    github: "https://github.com/example/website1",
+  },
+  {
+    img: "images/hero-slider-2.jpg",
+    alt: "Mobile project 1",
+    dataName: "android", // Możliwe dodanie android/website/ios
+    p: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime distinctio nostrum.",
+    a: "https://example.com/android1",
+    github: "https://github.com/example/android1",
+  },
+];
+
+/*=============== DYNAMIC LOAD PROJECTS ===============*/
+
+// Wybieramy kontener, do którego wstawimy projekty
+const projectsContainer = document.querySelector(".gallery");
+
+// Funkcja renderująca projekty
+function renderProjects() {
+  // Iterujemy po projektach i tworzymy HTML dla każdego projektu
+  projects.forEach((project) => {
+    const projectElement = document.createElement("div");
+    projectElement.classList.add("project-img");
+    projectElement.setAttribute("data-name", project.dataName);
+
+    projectElement.innerHTML = `
+            <img src="${project.img}" alt="${project.alt}">
+            <div class="proj-overlay">
+                <h4>${capitalizeFirstLetter(project.dataName)} Projects</h4>
+                <p>${project.p}</p>
+                <div class="action-aria">
+                    <a href="${
+                      project.liveDemo
+                    }" class="btn" target="_blank">Live Demo</a>
+                    <a href="${
+                      project.github
+                    }" class="btn btn-light" target="_blank">Github</a>
+                </div>
+            </div>
+        `;
+
+    // Dodajemy stworzony element do kontenera
+    projectsContainer.appendChild(projectElement);
+  });
+}
+
+// Funkcja, aby ładnie wyświetlić nazwę kategorii projektu (np. 'website' => 'Website')
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// Wywołanie funkcji renderującej projekty
+renderProjects();
+
+// Funkcja, aby ładnie wyświetlić nazwę platformy (np. 'website' => 'Website')
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
