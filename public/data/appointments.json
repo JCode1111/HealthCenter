@@ -1,0 +1,12 @@
+[
+  {
+    "pesel": "78945612332",
+    "name": "kuba",
+    "surname": "test",
+    "email": "kruzlakjakub6@gmail.com",
+    "phone": "123456789",
+    "doctor": "doc1",
+    "appointmentDate": "2025-05-28",
+    "appointmentTime": "09:00"
+  }
+]

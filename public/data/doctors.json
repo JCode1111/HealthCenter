@@ -1,0 +1,107 @@
+[
+  {
+    "id": "doc1",
+    "img": "images/doctor-img.png",
+    "alt": "Dr. Anna Kowalska",
+    "name": "Anna",
+    "surname": "Kowalska",
+    "specialization": "Kardiolog",
+    "bio": "Specjalista chorób serca z 10-letnim doświadczeniem.",
+    "workdays": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+    "hours": {
+      "Monday": [
+        "08:00",
+        "08:30",
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00",
+        "12:30",
+        "13:00",
+        "13:30",
+        "14:00"
+      ],
+      "Tuesday": [
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00",
+        "12:30",
+        "13:00",
+        "13:30",
+        "14:00"
+      ],
+      "Wednesday": [
+        "08:00",
+        "08:30",
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00",
+        "12:30",
+        "13:00",
+        "13:30",
+        "14:00"
+      ],
+      "Thursday": [
+        "08:00",
+        "08:30",
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00",
+        "12:30",
+        "13:00",
+        "13:30",
+        "14:00"
+      ]
+    }
+  },
+  {
+    "id": "doc2",
+    "img": "images/doctor-img.png",
+    "alt": "Dr. Piotr Nowak",
+    "name": "Piotr",
+    "surname": "Nowak",
+    "specialization": "Dermatolog",
+    "bio": "Zajmuje się leczeniem chorób skóry i alergii.",
+    "workdays": ["Monday", "Tuesday", "Wednesday"],
+    "hours": {
+      "Monday": ["08:00", "08:30", "09:00", "09:30", "10:00"],
+      "Tuesday": ["10:00", "10:30", "11:00"],
+      "Wednesday": ["08:00", "08:30", "09:00", "09:30", "10:00"]
+    }
+  },
+  {
+    "id": "doc3",
+    "img": "images/doctor-img.png",
+    "alt": "Dr. Artur Arturowicz",
+    "name": "Artur",
+    "surname": "Arturowicz",
+    "specialization": "Lekarz internista",
+    "bio": "Zajmuje się leczeniem osób dorosłych",
+    "workdays": ["Thursday", "Friday"],
+    "hours": ["13:00", "14:00", "15:00"]
+  },
+  {
+    "id": "doc4",
+    "img": "images/doctor-img.png",
+    "alt": "Dr. Maciej Maciak",
+    "name": "Maciej",
+    "surname": "Maciak",
+    "specialization": "Lekarz p ediatra",
+    "bio": "Zajmuje się leczeniem dzieci",
+    "workdays": ["Thursday", "Friday"],
+    "hours": ["13:00", "14:00", "15:00"]
+  }
+]

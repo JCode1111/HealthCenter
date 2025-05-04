@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcenter Euromedic</title>
+
+    <!-- Primary Meta tags -->
+
+    <meta
+      name="description"
+      content="This is a Restaurant html template made by codewithsadee"
+    />
+  </head>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+  <!-- GOOGLE FONTS  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
+    rel="stylesheet"
+  />
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Preload images -->
+  <link rel="preload" as="image" href="./images/hero-slider-1.jpg" />
+  <link rel="preload" as="image" href="./images/hero-slider-2.jpg" />
+  <link rel="preload" as="image" href="./images/hero-slider-3.jpg" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+  />
+  <body>
+    <!-- PRELOADER -->
+
+    <div class="preload" data-preaload>
+      <div class="circle"></div>
+      <p class="text">EuroMedic</p>
+    </div>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="container">
+        <address class="topbar-item">
+          <div class="icon">
+            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+          </div>
+
+          <span class="span">
+            Przychodnia ul. Zywiecka 150, Bielsko-Biala 43-300
+          </span>
+        </address>
+
+        <div class="separator"></div>
+
+        <div class="topbar-item item-2">
+          <div class="icon">
+            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+          </div>
+
+          <span class="span">od pon-pt: 8.00 do 18.00 </span>
+        </div>
+
+        <a href="tel:+11234567890" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+
+          <span class="span">+1 123 456 7890</span>
+        </a>
+
+        <div class="separator"></div>
+
+        <a href="mailto:booking@restaurant.com" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+          </div>
+
+          <span class="span">rej.euromedic@gmail.com</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./images/logo.png"
+            width="160"
+            height="50"
+            alt="Grilli - Home"
+          />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <button class="close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+          <a href="#" class="logo">
+            <img
+              src="./images/logo.png"
+              width="160"
+              height="50"
+              alt="Healthcenter"
+            />
+          </a>
+
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link hover-underline">
+                <div class="separator"></div>
+
+                <span class="span">Home</span>
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#menu" class="navbar-link hover-underline">
+                <div class="separator"></div>
+
+                <span class="span">O nas</span>
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#about" class="navbar-link hover-underline">
+                <div class="separator"></div>
+
+                <span class="span">Lekarze</span>
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link hover-underline">
+                <div class="separator"></div>
+
+                <span class="span">Rejestracja</span>
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link hover-underline">
+                <div class="separator"></div>
+
+                <span class="span">Kontakt</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="text-center">
+            <p class="headline-1 navbar-title">Odwiedź nas</p>
+
+            <address class="body-4">
+              Przychodnia <br />
+              ul. Zywiecka 150, Bielsko-Biala 43-300
+            </address>
+
+            <p class="body-4 navbar-text">Otwarte pon-pt: 8.00 - 18.00</p>
+
+            <a href="mailto:booking@grilli.com" class="body-4 sidebar-link"
+              >rej.euromedic@gmail.com</a
+            >
+
+            <div class="separator"></div>
+
+            <p class="contact-label">Zarezerwuj wizyte</p>
+
+            <a
+              href="tel:+88123123456"
+              class="body-1 contact-number hover-underline"
+            >
+              +88-123-123456
+            </a>
+          </div>
+        </nav>
+
+        <a href="#reservation" class="btn btn-secondary">
+          <span class="text text-1">Rezerwuj</span>
+
+          <span class="text text-2" aria-hidden="true">Rezerwuj</span>
+        </a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- HERO -->
+        <section class="hero text-center" aria-label="home" id="home">
+          <ul class="hero-slider" data-hero-slider>
+            <li class="slider-item active" data-hero-slider-item>
+              <div class="slider-bg">
+                <img
+                  src="./images/hero-slider-1.jpg"
+                  width="1880"
+                  height="950"
+                  alt=""
+                  class="img-cover"
+                />
+              </div>
+
+              <p class="label-2 section-subtitle slider-reveal">
+                Przychodnia EuroMedic
+              </p>
+
+              <h1 class="display-1 hero-title slider-reveal">
+                Bielsko-Biała, Zywiecka 150 <br />
+                tel: +1 123 456 7890
+              </h1>
+
+              <a href="#reservation" class="btn btn-secondary slider-reveal">
+                <span class="text text-1">Rezerwuj</span>
+
+                <span class="text text-2" aria-hidden="true">Rezerwuj</span>
+              </a>
+            </li>
+
+            <li class="slider-item" data-hero-slider-item>
+              <div class="slider-bg">
+                <img
+                  src="./images/hero-slider-2.jpg"
+                  width="1880"
+                  height="950"
+                  alt=""
+                  class="img-cover"
+                />
+              </div>
+
+              <p class="label-2 section-subtitle slider-reveal">
+                Przychodnia EuroMedic
+              </p>
+
+              <h1 class="display-1 hero-title slider-reveal">
+                Potrzebujesz pilnej wizyty<br />
+                Lekarskiej
+              </h1>
+
+              <p class="body-2 hero-text slider-reveal">
+                Dokonaj rezerwacji wizyty ONLINE
+              </p>
+
+              <a href="#reservation" class="btn btn-secondary slider-reveal">
+                <span class="text text-1">Rezerwuj</span>
+
+                <span class="text text-2" aria-hidden="true">Rezerwuj</span>
+              </a>
+            </li>
+
+            <li class="slider-item" data-hero-slider-item>
+              <div class="slider-bg">
+                <img
+                  src="./images/hero-slider-4.jpg"
+                  width="1880"
+                  height="950"
+                  alt=""
+                  class="img-cover"
+                />
+              </div>
+
+              <p class="label-2 section-subtitle slider-reveal">
+                Przychodnia EuroMedic
+              </p>
+
+              <h1 class="display-1 hero-title slider-reveal">
+                Profesjonalna opieka Zdrowotna<br />
+              </h1>
+
+              <p class="body-2 hero-text slider-reveal">
+                Zapewniamy kompleksowe usługi medyczne dla całej rodziny
+              </p>
+
+              <a href="#reservation" class="btn btn-secondary slider-reveal">
+                <span class="text text-1">Rezerwuj</span>
+
+                <span class="text text-2" aria-hidden="true">Rezerwuj</span>
+              </a>
+            </li>
+          </ul>
+
+          <button
+            class="slider-btn prev"
+            aria-label="slide to previous"
+            data-prev-btn
+          >
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
+
+          <button
+            class="slider-btn next"
+            aria-label="slide to next"
+            data-next-btn
+          >
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
+        </section>
+
+        <!-- DOCTORS -->
+        <section class="projects section" id="projects">
+          <h2 class="section__title">Lekarze</h2>
+          <span class="section__subtitle">Lista wszystkich lekarzy</span>
+
+          <div class="container section__border">
+            <div class="gallery"></div>
+          </div>
+        </section>
+
+
+        <!-- Reservation -->
+        <section class="Reservation section" id="reservation">
+          <h2 class="section__title">Zarezerwuj wizytę </h2>
+        <div class="form-calendar-wrapper">
+          <!-- FORMULARZ -->
+          <div class="form-container">
+            <form class="form">
+
+              <div class="input-group">
+                <label for="id" class="form-label">Pesel</label>
+                <input type="text" id="id" name="id" class="input" required />
+              </div>
+
+              <div class="input-group">
+                <label for="name" class="form-label">Imię</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="input"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="surname" class="form-label">Nazwisko</label>
+                <input
+                  type="text"
+                  id="surname"
+                  name="surname"
+                  class="input"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="email" class="form-label">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="input"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="telephone" class="form-label">Telefon</label>
+                <input
+                  type="text"
+                  id="telephone"
+                  name="telephone"
+                  class="input"
+                  required
+                />
+              </div>
+              
+              <div class="input-group">
+                <label for="doctor" class="form-label">Wybierz lekarza</label>
+                <select id="doctor" class="input" required>
+                  <option selected disabled>Wybierz lekarza</option>
+                </select>
+              </div>
+              
+              <div class="input-group">
+                <label for="appointment-time" class="form-label">Wybierz godzinę</label>
+                <select id="appointment-time" class="input" required>
+                  <option selected disabled>Wybierz godzinę</option>
+                </select>
+              </div>
+              
+              <input type="hidden" id="appointment-date" name="appointmentDate" />
+
+              <button type="submit" class="btn btn-secondary ">
+                
+                  <span class="text text-1">Rezerwuj</span>
+  
+                  <span class="text text-2" aria-hidden="true">Rezerwuj</span>
+
+                </button>
+            </form>
+          </div>
+
+
+
+          <!-- KALENDARZ -->
+          <div class="calendar-container">
+            <label for="calendar-inline" class="form-label"
+              >Wybierz termin wizyty</label
+            >
+            <div id="calendar-inline"></div>
+          </div>
+          
+        </div>
+      </article>
+    </main>
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a
+      href="#top"
+      class="back-top-btn active"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <!-- custom js link -->
+    <script src="./js/script.js"></script>
+    <!--  - ionicon link -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("#calendar-inline", {
+        inline: true,
+        minDate: "today",
+        locale: "pl",
+        dateFormat: "Y-m-d",
+        onChange: function (selectedDates, dateStr, instance) {
+          console.log("Wybrana data:", dateStr);
+        },
+      });
+    </script>
+  </body>
+</html>
