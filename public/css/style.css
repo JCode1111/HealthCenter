@@ -644,6 +644,15 @@ body.nav-active {
 /* HEADER */
 .header .btn {
   display: none;
+  margin-bottom: 50px;
+}
+
+.header .logo img {
+  max-width: max-content;
+  margin-inline: auto;
+  margin-block-end: 60px;
+  height: 100px;
+  margin-bottom: 50px;
 }
 
 .header {
@@ -651,6 +660,7 @@ body.nav-active {
   top: 0;
   left: 0;
   width: 100%;
+  height: 120px;
   background-color: transparent;
   padding-block: 40px;
   z-index: 4;
@@ -675,11 +685,13 @@ body.nav-active {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  margin-bottom: 150px;
 }
 
 .nav-open-btn {
   padding: 12px;
   padding-inline-end: 0;
+  margin-bottom: 50px;
 }
 
 .nav-open-btn .line {
@@ -751,7 +763,9 @@ body.nav-active {
   margin-inline: auto;
   margin-block-end: 60px;
   height: 100px;
+  margin-bottom: 50px;
 }
+
 
 .navbar-list {
   border-block-end: 1px solid var(--white2);
@@ -1519,6 +1533,7 @@ body.nav-active {
   .navbar-list {
     display: flex;
     gap: 30px;
+    margin-bottom: 50px;
   }
 
   .navbar-item {
