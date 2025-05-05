@@ -1005,13 +1005,7 @@ body.nav-active {
 .About .btn-secondary .text-2 {
   color: var(--white);
 }
-@media (max-width: 1200px) {
-  .container {
-    height: auto;
-    padding: 40px 20px;
-    width: 100%;
-  }
-
+@media (max-width: 1200px) { 
   .content-section {
     position: relative;
     top: 0;
@@ -1045,11 +1039,8 @@ body.nav-active {
     font-size: 48px;
     line-height: 58px;
   }
-
-  .explore-button {
-    width: 180px;
-  }
 }
+
 .about-wrapper {
   display: flex;
   flex-direction: row;
@@ -1366,7 +1357,7 @@ body.nav-active {
 }
 
 /* End Projects Section */
-
+/* 
 /* Footer Container */
 .footer {
   background-color: var(--white);
@@ -1510,7 +1501,7 @@ body.nav-active {
   .footer-copyright {
     margin-top: 20px;
   }
-}
+} */
 
 
 
