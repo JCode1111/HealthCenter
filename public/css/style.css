@@ -863,6 +863,225 @@ body.nav-active {
   pointer-events: all;
 }
 
+/* ABOUT US */
+
+.About{
+    position: relative;
+    padding-block: 120px;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+.About .section__title {
+  color: var(--davys-grey);
+  font-size: var(--fontSize-title-1);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.About .section__subtitle {
+  color: var(--green-dark2);
+  font-size: var(--fontSize-title-3);
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.background-vector {
+  position: absolute;
+  top: -50px;
+  width: 200%;
+  height: auto;
+  z-index: 0;
+}
+
+.product-frame {
+  position: relative;
+  width: 545px;
+  height: 545px;
+  background-color: #f0f5fd;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image {
+  position: relative;
+  top: 23px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.content-section {
+  max-width: 600px;
+  z-index: 5;
+  flex: 1;
+}
+
+.about-heading {
+  font-family: "Polt", serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 77px;
+  color: #000000;
+  text-transform: capitalize;
+  margin-bottom: 43px;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 29px;
+  color: var(--davys-grey);
+  margin-bottom: 20px;
+}
+
+
+.About .btn {
+  position: relative;
+  color: var(--green-light);
+  font-size: var(--fontSize-label-2);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-5);
+  max-width: max-content;
+  border: 2px solid var(--davys-grey);
+  padding: 12px 45px;
+  overflow: hidden;
+  z-index: 1;
+  left:25%
+}
+
+.About .btn::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 200%;
+  border-radius: var(--radius-circle);
+  background-color: var(--green-dark);
+  transition: var(--transition-2);
+  z-index: -1;
+}
+
+.About .btn .text {
+  transition: var(--transition-1);
+  color: var(--green-dark);
+}
+
+.About .btn .text-2 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: max-content;
+  color: var(--smoky-black-1);
+}
+
+.About .btn:is(:hover, :focus-visible)::before {
+  bottom: -50%;
+}
+
+.About .btn:is(:hover, :focus-visible) .text-1 {
+  transform: translateY(-40px);
+}
+
+.About .btn:is(:hover, :focus-visible) .text-2 {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.About .btn-secondary {
+  background-color: var(--green-light);
+  color: var(--black);
+}
+
+.About .btn-secondary::before {
+  background-color: var(--green-dark);
+}
+
+.About .btn-secondary .text-2 {
+  color: var(--white);
+}
+@media (max-width: 1200px) {
+  .container {
+    height: auto;
+    padding: 40px 20px;
+    width: 100%;
+  }
+
+  .content-section {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+
+  .product-frame {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto 40px;
+  }
+
+  .product-image {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .explore-button {
+    width: 180px;
+  }
+}
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap; /* Dodano, by elementy mogły się zawijać */
+}
+
+@media (max-width: 1200px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .product-frame,
+  .content-section {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+
 /* HERO */
 
 .hero .slider-btn {
@@ -1147,6 +1366,152 @@ body.nav-active {
 }
 
 /* End Projects Section */
+
+/* Footer Container */
+.footer {
+  background-color: var(--white);
+  padding: 40px 20px;
+  position: relative;
+  width: 100%;
+  bottom: -100px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-bg img {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Links wrapper */
+.footer-links {
+  display: flex;
+  gap: 40px;
+  flex: 1;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+/* Navbar-link styles (copied for footer) */
+.footer .navbar-link {
+  position: relative;
+  font-size: var(--fontSize-label-2);
+  color: var(--black-alpha-80);
+  text-transform: uppercase;
+  padding-block: 10px;
+  display: inline-block;
+}
+
+.footer .navbar-link .span {
+  transition: var(--transition-1);
+  color: var(--black-alpha-80);
+}
+
+.footer .navbar-link:is(:hover, :focus-visible) .span {
+  color: var(--green-dark);
+  transform: translateX(20px);
+}
+
+.footer .navbar-link .separator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--black-alpha-80);
+  transform: translateY(-50%) rotate(45deg);
+  opacity: 0;
+  transition: var(--transition-1);
+}
+
+.footer .navbar-link:is(:hover, :focus-visible) .separator {
+  opacity: 1;
+}
+
+/* Godziny otwarcia */
+.footer-hours {
+  font-size: var(--fontSize-label-1);
+  color: var(--black-alpha-80);
+  padding-left: 20px;
+}
+
+.footer-hours h4 {
+  margin-bottom: 10px;
+}
+
+.footer-hours p {
+  margin-bottom: 5px;
+  color: var(--black-alpha-80);
+}
+
+/* Pasek copyright */
+.footer-copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-copyright p {
+  color: var(--black-alpha-80);
+  font-size: var(--fontSize-label-3);
+  margin: 0;
+}
+
+/* Responsywność */
+/* Responsywność - dla ekranów poniżej 928px */
+@media (max-width: 928px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* Obrazek na górze */
+  .footer-bg img {
+    max-width: 100%;
+    margin-bottom: 20px; /* Odstęp od pozostałych sekcji */
+  }
+
+  /* Linki i godziny poniżej obrazka */
+  .footer-links {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 100px;
+  }
+
+  .footer-hours {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  /* Paski copyright */
+  .footer-copyright {
+    margin-top: 20px;
+  }
+}
+
 
 
 /*-----------------------------------*\

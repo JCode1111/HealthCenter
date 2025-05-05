@@ -19,39 +19,38 @@
       }
 
       .container {
-        position: relative;
         max-width: 1400px;
-        height: 990px;
         margin: 0 auto;
-        overflow: hidden;
+        padding: 100px 40px; /* nowy padding zamiast height + top */
       }
 
       .background-vector {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 874px;
-        height: 814px;
+        top: -50px;
+        left: -50px;
+        width: 120%;
+        height: auto;
         z-index: 0;
       }
 
       .dots-pattern {
         position: absolute;
-        top: 193px;
-        left: 617px;
-        width: 105px;
-        height: 105px;
+        top: 5%;
+        right: 2%;
+        width: 80px;
         z-index: 1;
       }
 
       .product-frame {
-        position: absolute;
-        top: 232px;
-        left: 184px;
+        position: relative;
         width: 545px;
-        height: 500px;
+        height: 545px;
         background-color: #f0f5fd;
         z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
       }
 
       .product-image {
@@ -65,19 +64,17 @@
 
       .vector-overlay-1 {
         position: absolute;
-        top: 338px;
-        left: 379px;
-        width: 466px;
-        height: 334px;
-        z-index: 3;
+        bottom: 0px;
+        right: 0;
+        width: 50%;
+        z-index: 1;
       }
 
       .vector-overlay-2 {
         position: absolute;
-        top: 203px;
-        left: 156px;
-        width: 398px;
-        height: 334px;
+        top: 0;
+        left: 0%;
+        width: 50%;
         z-index: 1;
       }
 
@@ -150,11 +147,9 @@
       }
 
       .content-section {
-        position: absolute;
-        top: 249px;
-        left: 805px;
-        width: 451px;
+        max-width: 600px;
         z-index: 5;
+        flex: 1;
       }
 
       .about-heading {
@@ -261,43 +256,73 @@
           width: 180px;
         }
       }
+      .about-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        position: relative;
+        z-index: 2;
+        flex-wrap: wrap; /* Dodano, by elementy mogły się zawijać */
+      }
+
+      @media (max-width: 1200px) {
+        .about-wrapper {
+          flex-direction: column;
+          align-items: center;
+          top: 0;
+          left: 0;
+          padding: 20px;
+          gap: 20px;
+        }
+
+        .product-frame,
+        .content-section {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-width: 600px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <img
-        src="images/img_ellipse_2686.png"
-        alt="Background shape"
-        class="background-vector"
-      />
-      <img
-        src="images/img_group_9.svg"
-        alt="Decorative dots pattern"
-        class="dots-pattern"
-      />
+      <div class="about-wrapper">
+        <div class="product-frame">
+          <img
+            src="images/img_ellipse_2686.png"
+            alt="Background shape"
+            class="background-vector"
+          />
+          <img
+            src="images/img_group_9.svg"
+            alt="Decorative dots pattern"
+            class="dots-pattern"
+          />
+          <img
+            src="images/img_vector_5335.svg"
+            alt="Decorative overlay"
+            class="vector-overlay-1"
+          />
+          <img
+            src="images/img_vector_5336.svg"
+            alt="Decorative overlay"
+            class="vector-overlay-2"
+          />
 
-      <div class="product-frame">
+          <img
+            src="images/img_image_622.png"
+            alt="Glass bottle product"
+            class="product-image"
+          />
+        </div>
+
+        <!-- <div class="reviews-card">
         <img
-          src="images/img_image_622.png"
-          alt="Glass bottle product"
-          class="product-image"
-        />
-      </div>
-
-      <img
-        src="images/img_vector_5335.svg"
-        alt="Decorative overlay"
-        class="vector-overlay-1"
-      />
-      <img
-        src="images/img_vector_5336.svg"
-        alt="Decorative overlay"
-        class="vector-overlay-2"
-      />
-
-      <div class="reviews-card">
-        <img
-          src="images/doctor-img.png"
+          src="images/img_avater.png"
           alt="Customer avatars"
           class="reviews-avatars"
         />
@@ -307,34 +332,35 @@
       <div class="members-card">
         <p class="members-label">Monthly Members</p>
         <p class="members-count">5000+</p>
-      </div>
+      </div> -->
 
-      <div class="content-section">
-        <h1 class="about-heading">About Us</h1>
+        <div class="content-section">
+          <h1 class="about-heading">About Us</h1>
 
-        <p class="about-text">
-          Welcome to AU Natural Organics. We are an organic store creating
-          natural, organic beauty products that nurture and beautify your skin
-          in a healthy way. We offer the healthiest, purest, and most effective
-          organic skincare products so you can shop confidently with the peace
-          of mind that you are revitalizing and nourishing your hair, skin and
-          nails in an eco-friendly and non-toxic way.
-        </p>
+          <p class="about-text">
+            Welcome to AU Natural Organics. We are an organic store creating
+            natural, organic beauty products that nurture and beautify your skin
+            in a healthy way. We offer the healthiest, purest, and most
+            effective organic skincare products so you can shop confidently with
+            the peace of mind that you are revitalizing and nourishing your
+            hair, skin and nails in an eco-friendly and non-toxic way.
+          </p>
 
-        <p class="about-text">
-          We curate all our products, including our organic essential oils,
-          natural butter, carrier oils, and oral care products, from handpicked
-          natural, fresh ingredients
-        </p>
+          <p class="about-text">
+            We curate all our products, including our organic essential oils,
+            natural butter, carrier oils, and oral care products, from
+            handpicked natural, fresh ingredients
+          </p>
 
-        <a href="#" class="explore-button">
-          <img
-            src="images/img_bg.svg"
-            alt="Button background"
-            class="explore-button-bg"
-          />
-          <span class="explore-text">Explore</span>
-        </a>
+          <a href="#" class="explore-button">
+            <img
+              src="images/img_bg.svg"
+              alt="Button background"
+              class="explore-button-bg"
+            />
+            <span class="explore-text">Explore</span>
+          </a>
+        </div>
       </div>
     </div>
 
