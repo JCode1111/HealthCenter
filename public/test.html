@@ -5,384 +5,474 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - AU Natural Organics</title>
     <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+      /* btn-3 */
 
-      body {
-        font-family: "Milford", Arial, sans-serif;
-        background-color: #ffffff;
-        color: #505050;
-        line-height: 1.6;
-      }
-
-      .container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 100px 40px; /* nowy padding zamiast height + top */
-      }
-
-      .background-vector {
-        position: absolute;
-        top: -50px;
-        left: -50px;
-        width: 120%;
-        height: auto;
-        z-index: 0;
-      }
-
-      .dots-pattern {
-        position: absolute;
-        top: 5%;
-        right: 2%;
-        width: 80px;
-        z-index: 1;
-      }
-
-      .product-frame {
-        position: relative;
-        width: 545px;
-        height: 545px;
-        background-color: #f0f5fd;
-        z-index: 2;
-        display: flex;
+      .btn-3 {
+        scale: 0.65;
+        line-height: 1;
+        text-decoration: none;
+        display: inline-flex;
         align-items: center;
-        justify-content: center;
+        gap: 0.75rem;
+        background-color: var(--clr);
+        color: #fff;
+        border-radius: 10rem;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 12px 24px 12px 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: background-color 0.3s;
+      }
+
+      .btn-3 .button__icon-wrapper {
+        flex-shrink: 0;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        color: var(--clr);
+        background-color: #fff;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
         overflow: hidden;
       }
 
-      .product-image {
-        position: relative;
-        top: 23px;
-        left: 0;
-        width: 500px;
-        height: 500px;
-        object-fit: cover;
+      .btn-3:hover {
+        background-color: #02a2f8;
       }
 
-      .vector-overlay-1 {
+      .btn-3:hover .button__icon-wrapper {
+        color: #02a2f8;
+      }
+
+      .btn-3 .button__icon-svg--copy {
         position: absolute;
-        bottom: 0px;
-        right: 0;
-        width: 50%;
-        z-index: 1;
+        transform: translate(-150%, 150%);
       }
 
-      .vector-overlay-2 {
-        position: absolute;
-        top: 0;
-        left: 0%;
-        width: 50%;
-        z-index: 1;
+      .btn-3:hover .button__icon-svg:first-child {
+        transition: transform 0.3s ease-in-out;
+        transform: translate(150%, -150%);
       }
 
-      .reviews-card {
-        position: absolute;
-        top: 717px;
-        left: 202px;
-        width: 160px;
-        height: 119px;
-        background-color: #ffffff;
-        border-radius: 12px;
-        box-shadow: -28px 30px 80px rgba(81, 99, 233, 0.08);
-        z-index: 4;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
+      .btn-3:hover .button__icon-svg--copy {
+        transition: transform 0.3s ease-in-out 0.1s;
+        transform: translate(0);
       }
 
-      .reviews-avatars {
-        width: 108px;
-        height: 28px;
-        margin-bottom: 14px;
-      }
+      /* btn-5 */
 
-      .reviews-text {
-        font-family: "Poppins", sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        color: #1c2d49;
-        text-align: center;
-        line-height: 27px;
-      }
-
-      .members-card {
-        position: absolute;
-        top: 265px;
-        left: 595px;
-        width: 150px;
-        height: 119px;
-        background-color: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.016);
-        z-index: 4;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
-      }
-
-      .members-label {
-        font-family: "Circular Std", sans-serif;
-        font-size: 13px;
-        font-weight: 500;
-        color: #47566d;
-        text-align: center;
-        line-height: 17px;
-        margin-bottom: 9px;
-      }
-
-      .members-count {
-        font-family: "Oxygen", sans-serif;
-        font-size: 34px;
-        font-weight: 700;
-        color: #1c2d49;
-        text-align: center;
-        line-height: 43px;
-      }
-
-      .content-section {
-        max-width: 600px;
-        z-index: 5;
-        flex: 1;
-      }
-
-      .about-heading {
-        font-family: "Polt", serif;
-        font-size: 64px;
-        font-weight: 400;
-        line-height: 77px;
-        color: #000000;
-        text-transform: capitalize;
-        margin-bottom: 43px;
-      }
-
-      .about-text {
-        font-size: 16px;
-        line-height: 29px;
-        color: #505050;
-        margin-bottom: 20px;
-      }
-
-      .explore-button {
-        position: relative;
-        display: inline-block;
-        margin-top: 71px;
-        width: 203px;
-        height: 58px;
-        background-color: transparent;
+      .btn-5 {
+        --primary: #02a2f8;
+        --neutral-1: #f7f8f7;
+        --neutral-2: #e7e7e7;
+        --radius: 32px;
+        scale: 0.5;
         cursor: pointer;
+        border-radius: var(--radius);
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        transition: all 0.3s ease;
+        min-width: 160px;
+        padding: 0 20px;
+        height: 64px;
+        font-family: "Galano Grotesque", Poppins, Montserrat, sans-serif;
+        font-style: normal;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .btn-5:hover {
+        transform: scale(1.02);
+      }
+      .btn-5:active {
+        transform: scale(1);
+      }
+      .btn-5:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius);
+        background: gray;
+        border: 2.5px solid transparent;
+        z-index: 0;
+        transition: all 0.4s ease;
+      }
+      .btn-5:hover::after {
+        transform: scale(1.05, 1.1);
+      }
+      .btn-5::before {
+        content: "";
+        inset: 7px 6px 6px 6px;
+        position: absolute;
+        border-radius: 30px;
+        filter: blur(0.5px);
+        z-index: 2;
+      }
+      .btn-5 .state p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn-5 .state .icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: scale(1.25);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn-5 .state .icon svg {
+        overflow: visible;
       }
 
-      .explore-button-bg {
-        width: 100%;
-        height: 100%;
+      /* Outline */
+      .btn-5 .outline {
+        position: absolute;
+        border-radius: inherit;
+        overflow: hidden;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        inset: -2px -3.5px;
+      }
+      .btn-5 .outline::before {
+        content: "";
+        position: absolute;
+        inset: -100%;
+        background: conic-gradient(
+          from 180deg,
+          transparent 60%,
+          gray 80%,
+          transparent 100%
+        );
+        animation: spin 2s linear infinite;
+        animation-play-state: paused;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .btn-5:hover .outline {
+        opacity: 1;
+      }
+      .btn-5:hover .outline::before {
+        animation-play-state: running;
       }
 
-      .explore-text {
+      /* Letters */
+      .btn-5 .state p span {
+        display: block;
+        opacity: 0;
+        animation: slideDown 0.8s ease forwards calc(var(--i) * 0.03s);
+      }
+      .btn-5:hover p span {
+        opacity: 1;
+        animation: wave 0.5s ease forwards calc(var(--i) * 0.02s);
+      }
+      .btn-5:focus p span {
+        opacity: 1;
+        animation: disapear 0.6s ease forwards calc(var(--i) * 0.03s);
+      }
+      @keyframes wave {
+        30% {
+          opacity: 1;
+          transform: translateY(4px) translateX(0) rotate(0);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(-3px) translateX(0) rotate(0);
+          color: green;
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) translateX(0) rotate(0);
+        }
+      }
+      @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px) translateX(5px) rotate(-90deg);
+          color: var(--primary);
+          filter: blur(5px);
+        }
+        30% {
+          opacity: 1;
+          transform: translateY(4px) translateX(0) rotate(0);
+          filter: blur(0);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(-3px) translateX(0) rotate(0);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) translateX(0) rotate(0);
+        }
+      }
+      @keyframes disapear {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+          transform: translateX(5px) translateY(20px);
+          color: green;
+          filter: blur(5px);
+        }
+      }
+
+      /* Plane */
+      .btn-5 .state--default .icon svg {
+        animation: land 0.6s ease forwards;
+      }
+      .btn-5:hover .state--default .icon {
+        transform: rotate(45deg) scale(1.25);
+      }
+      .btn-5:focus .state--default svg {
+        animation: takeOff 0.8s linear forwards;
+      }
+      .btn-5:focus .state--default .icon {
+        transform: rotate(0) scale(1.25);
+      }
+      @keyframes takeOff {
+        0% {
+          opacity: 1;
+        }
+        60% {
+          opacity: 1;
+          transform: translateX(70px) rotate(45deg) scale(2);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(160px) rotate(45deg) scale(0);
+        }
+      }
+      @keyframes land {
+        0% {
+          transform: translateX(-60px) translateY(30px) rotate(-50deg) scale(2);
+          opacity: 0;
+          filter: blur(3px);
+        }
+        100% {
+          transform: translateX(0) translateY(0) rotate(0);
+          opacity: 1;
+          filter: blur(0);
+        }
+      }
+
+      /* Contrail */
+      .btn-5 .state--default .icon:before {
+        content: "";
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: "Milford", sans-serif;
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        color: #ffffff;
-        text-transform: uppercase;
+        height: 2px;
+        width: 0;
+        left: -5px;
+        background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
       }
-
-      @media (max-width: 1200px) {
-        .container {
-          height: auto;
-          padding: 40px 20px;
+      .btn-5:focus .state--default .icon:before {
+        animation: contrail 0.8s linear forwards;
+      }
+      @keyframes contrail {
+        0% {
+          width: 0;
+          opacity: 1;
         }
-
-        .content-section {
-          position: relative;
-          top: 0;
-          left: 0;
-          width: 100%;
-          max-width: 600px;
-          margin: 0 auto;
-          padding: 40px 0;
+        8% {
+          width: 15px;
         }
-
-        .product-frame {
-          position: relative;
-          top: 0;
-          left: 0;
-          width: 100%;
-          max-width: 500px;
-          height: auto;
-          margin: 0 auto 40px;
+        60% {
+          opacity: 0.7;
+          width: 80px;
         }
-
-        .product-image {
-          position: relative;
-          top: 0;
-          width: 100%;
-          height: auto;
-        }
-
-        .vector-overlay-1,
-        .vector-overlay-2,
-        .background-vector,
-        .dots-pattern {
-          display: none;
-        }
-
-        .reviews-card,
-        .members-card {
-          position: relative;
-          top: 0;
-          left: 0;
-          margin: 20px auto;
+        100% {
+          opacity: 0;
+          width: 160px;
         }
       }
 
-      @media (max-width: 768px) {
-        .about-heading {
-          font-size: 48px;
-          line-height: 58px;
-        }
-
-        .explore-button {
-          width: 180px;
-        }
-      }
-      .about-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 40px;
-        position: relative;
+      /* States */
+      .btn-5 .state {
+        padding-left: 29px;
         z-index: 2;
-        flex-wrap: wrap; /* Dodano, by elementy mogły się zawijać */
+        display: flex;
+        position: relative;
       }
-
-      @media (max-width: 1200px) {
-        .about-wrapper {
-          flex-direction: column;
-          align-items: center;
-          top: 0;
-          left: 0;
-          padding: 20px;
-          gap: 20px;
+      .btn-5 .state--default span:nth-child(4) {
+        margin-right: 5px;
+      }
+      .btn-5 .state--sent {
+        display: none;
+      }
+      .btn-5 .state--sent svg {
+        transform: scale(1.25);
+        margin-right: 8px;
+      }
+      .btn-5:focus .state--default {
+        position: absolute;
+      }
+      .btn-5:focus .state--sent {
+        display: flex;
+      }
+      .btn-5:focus .state--sent span {
+        opacity: 0;
+        animation: slideDown 0.8s ease forwards calc(var(--i) * 0.2s);
+      }
+      .btn-5:focus .state--sent .icon svg {
+        opacity: 0;
+        animation: appear 1.2s ease forwards 0.8s;
+      }
+      @keyframes appear {
+        0% {
+          opacity: 0;
+          transform: scale(4) rotate(-40deg);
+          color: var(--primary);
+          filter: blur(4px);
         }
-
-        .product-frame,
-        .content-section {
-          position: relative;
-          top: 0;
-          left: 0;
-          width: 100%;
-          max-width: 600px;
+        30% {
+          opacity: 1;
+          transform: scale(0.6);
+          filter: blur(1px);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.2);
+          filter: blur(0);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="about-wrapper">
-        <div class="product-frame">
-          <img
-            src="images/img_ellipse_2686.png"
-            alt="Background shape"
-            class="background-vector"
-          />
-          <img
-            src="images/img_group_9.svg"
-            alt="Decorative dots pattern"
-            class="dots-pattern"
-          />
-          <img
-            src="images/img_vector_5335.svg"
-            alt="Decorative overlay"
-            class="vector-overlay-1"
-          />
-          <img
-            src="images/img_vector_5336.svg"
-            alt="Decorative overlay"
-            class="vector-overlay-2"
-          />
+    <div>
+      <p>3</p>
+      <a style="--clr: #000" class="btn-3" href="#">
+        <span class="button__icon-wrapper">
+          <svg
+            width="10"
+            class="button__icon-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 15"
+          >
+            <path
+              fill="currentColor"
+              d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+            ></path>
+          </svg>
 
-          <img
-            src="images/img_image_622.png"
-            alt="Glass bottle product"
-            class="product-image"
-          />
-        </div>
-
-        <!-- <div class="reviews-card">
-        <img
-          src="images/img_avater.png"
-          alt="Customer avatars"
-          class="reviews-avatars"
-        />
-        <p class="reviews-text">8000+ reviews</p>
-      </div>
-
-      <div class="members-card">
-        <p class="members-label">Monthly Members</p>
-        <p class="members-count">5000+</p>
-      </div> -->
-
-        <div class="content-section">
-          <h1 class="about-heading">About Us</h1>
-
-          <p class="about-text">
-            Welcome to AU Natural Organics. We are an organic store creating
-            natural, organic beauty products that nurture and beautify your skin
-            in a healthy way. We offer the healthiest, purest, and most
-            effective organic skincare products so you can shop confidently with
-            the peace of mind that you are revitalizing and nourishing your
-            hair, skin and nails in an eco-friendly and non-toxic way.
-          </p>
-
-          <p class="about-text">
-            We curate all our products, including our organic essential oils,
-            natural butter, carrier oils, and oral care products, from
-            handpicked natural, fresh ingredients
-          </p>
-
-          <a href="#" class="explore-button">
-            <img
-              src="images/img_bg.svg"
-              alt="Button background"
-              class="explore-button-bg"
-            />
-            <span class="explore-text">Explore</span>
-          </a>
-        </div>
-      </div>
+          <svg
+            class="button__icon-svg button__icon-svg--copy"
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            fill="none"
+            viewBox="0 0 14 15"
+          >
+            <path
+              fill="currentColor"
+              d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+            ></path>
+          </svg>
+        </span>
+        Więcej informacji
+      </a>
     </div>
 
-    <script>
-      // Add hover effect to explore button
-      const exploreButton = document.querySelector(".explore-button");
-
-      exploreButton.addEventListener("mouseenter", function () {
-        this.style.transform = "scale(1.05)";
-        this.style.transition = "transform 0.3s ease";
-      });
-
-      exploreButton.addEventListener("mouseleave", function () {
-        this.style.transform = "scale(1)";
-      });
-
-      // Add click functionality to explore button
-      exploreButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        alert("Exploring more about AU Natural Organics!");
-        // In a real implementation, this would navigate to another page
-      });
-    </script>
+    <div>
+      <p>5</p>
+      <button class="btn-5">
+        <div class="outline"></div>
+        <div class="state state--default">
+          <div class="icon">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g style="filter: url(#shadow)">
+                <path
+                  d="M14.2199 21.63C13.0399 21.63 11.3699 20.8 10.0499 16.83L9.32988 14.67L7.16988 13.95C3.20988 12.63 2.37988 10.96 2.37988 9.78001C2.37988 8.61001 3.20988 6.93001 7.16988 5.60001L15.6599 2.77001C17.7799 2.06001 19.5499 2.27001 20.6399 3.35001C21.7299 4.43001 21.9399 6.21001 21.2299 8.33001L18.3999 16.82C17.0699 20.8 15.3999 21.63 14.2199 21.63ZM7.63988 7.03001C4.85988 7.96001 3.86988 9.06001 3.86988 9.78001C3.86988 10.5 4.85988 11.6 7.63988 12.52L10.1599 13.36C10.3799 13.43 10.5599 13.61 10.6299 13.83L11.4699 16.35C12.3899 19.13 13.4999 20.12 14.2199 20.12C14.9399 20.12 16.0399 19.13 16.9699 16.35L19.7999 7.86001C20.3099 6.32001 20.2199 5.06001 19.5699 4.41001C18.9199 3.76001 17.6599 3.68001 16.1299 4.19001L7.63988 7.03001Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M10.11 14.4C9.92005 14.4 9.73005 14.33 9.58005 14.18C9.29005 13.89 9.29005 13.41 9.58005 13.12L13.16 9.53C13.45 9.24 13.93 9.24 14.22 9.53C14.51 9.82 14.51 10.3 14.22 10.59L10.64 14.18C10.5 14.33 10.3 14.4 10.11 14.4Z"
+                  fill="currentColor"
+                ></path>
+              </g>
+              <defs>
+                <filter id="shadow">
+                  <fedropshadow
+                    dx="0"
+                    dy="1"
+                    stdDeviation="0.6"
+                    flood-opacity="0.5"
+                  ></fedropshadow>
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <p>
+            <span style="--i: 0">W</span>
+            <span style="--i: 1">y</span>
+            <span style="--i: 2">s</span>
+            <span style="--i: 3">l</span>
+            <span style="--i: 3">i</span>
+            <span style="--i: 3">j</span>
+          </p>
+        </div>
+        <div class="state state--sent">
+          <div class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              stroke-width="0.5px"
+              stroke="black"
+            >
+              <g style="filter: url(#shadow)">
+                <path
+                  fill="currentColor"
+                  d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z"
+                ></path>
+                <path
+                  fill="currentColor"
+                  d="M10.5795 15.5801C10.3795 15.5801 10.1895 15.5001 10.0495 15.3601L7.21945 12.5301C6.92945 12.2401 6.92945 11.7601 7.21945 11.4701C7.50945 11.1801 7.98945 11.1801 8.27945 11.4701L10.5795 13.7701L15.7195 8.6301C16.0095 8.3401 16.4895 8.3401 16.7795 8.6301C17.0695 8.9201 17.0695 9.4001 16.7795 9.6901L11.1095 15.3601C10.9695 15.5001 10.7795 15.5801 10.5795 15.5801Z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <p>
+            <span style="--i: 5">W</span>
+            <span style="--i: 6">y</span>
+            <span style="--i: 7">s</span>
+            <span style="--i: 8">ł</span>
+            <span style="--i: 8">a</span>
+            <span style="--i: 8">n</span>
+            <span style="--i: 8">e</span>
+          </p>
+        </div>
+      </button>
+    </div>
   </body>
 </html>

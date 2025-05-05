@@ -1501,7 +1501,7 @@ body.nav-active {
   .footer-copyright {
     margin-top: 20px;
   }
-} */
+} 
 
 
 
@@ -1513,8 +1513,8 @@ body.nav-active {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--green-light);
-  color: var(--green-dark);
+  background-color: var(--green-dark);
+  color: var(--white2);
   font-size: 22px;
   width: 50px;
   height: 50px;
@@ -1524,13 +1524,13 @@ body.nav-active {
   box-shadow: var(--shadow-1);
   transition: var(--transition-1);
   opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   z-index: 4;
 }
 
 .back-top-btn:is(:hover, :focus-visible) {
-  background-color: var(--green-dark);
-  color: var(--white2);
+  background-color: var(--green-light);
+  color: var(--green-dark);
 }
 
 .back-top-btn.active {
